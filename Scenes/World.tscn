@@ -1,0 +1,298 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://Scenes/World.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Objects/Spaceship.png" type="Texture" id=2]
+[ext_resource path="res://ladder.gd" type="Script" id=3]
+[ext_resource path="res://SpaceTileSet.tres" type="TileSet" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.3652, 94.6062 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3.51523, 57.4249 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3.65137, 53.3964 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 3.08917, 12.0347 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 20.7989, 48.2435 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 50.0099, 8.36966 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 4.60651, 46.4543 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 70.3007, 8.88245 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 39.6323, 8.88245 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 42.3983, 8.88245 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 3.11003, 31.0108 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 2.88031, 34.6869 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 45.7278, 8.47432 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 20.614, 41.6506 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 11.9189, 17.7025 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 27.6702, 8.43808 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 2.8577, 26.4814 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 45.6336, 8.50647 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 22.3628, 8.45901 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 34.704, 5.66608 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 4.26335, 26.5605 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 50.3573, 2.62201 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 8.26178, 31.7621 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 30.2151, 1.40402 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 2.13156, 27.3555 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 10.4187, 31.3532 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 4.95755, 16.4547 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 34.288, 5.36044 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 56.6003, 2.74382 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 31.492, 3.09335 )
+
+[node name="World" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Ship" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 962, 591.917 )
+scale = Vector2( 2, 2 )
+
+[node name="Sprite" type="Sprite" parent="Ship"]
+scale = Vector2( 0.125, 0.125 )
+z_index = -5
+texture = ExtResource( 2 )
+
+[node name="ladder1" type="Area2D" parent="Ship"]
+editor/display_folded = true
+visible = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/ladder1"]
+position = Vector2( 70.649, 21.002 )
+shape = SubResource( 1 )
+
+[node name="ladder2" type="Area2D" parent="Ship"]
+editor/display_folded = true
+visible = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/ladder2"]
+position = Vector2( -79.098, 33.497 )
+shape = SubResource( 2 )
+
+[node name="ladder3" type="Area2D" parent="Ship"]
+editor/display_folded = true
+visible = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/ladder3"]
+position = Vector2( -29.228, 95.838 )
+shape = SubResource( 3 )
+
+[node name="ladder4" type="Area2D" parent="Ship"]
+editor/display_folded = true
+visible = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/ladder4"]
+position = Vector2( 104.023, 37.518 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -54.0974, -98.1288 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 16.438, -58.488 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 79.998, -96.254 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -3.884, -7.884 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -123.354, -7.88351 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 117.865, -7.88351 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 144.976, -47.1 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -141.07, -50.7761 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 20.787, 58.348 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -54.067, 24.929 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 86.6786, 49.4734 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 126.109, 58.628 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 152.706, 25.3591 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 20.65, 100 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -63.9941, 100 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -118.515, 55.4019 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -154.232, 25.3591 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 4.4375, 152.812 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 58.308, 123.528 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 86.679, 118.165 )
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 118.532, 90.916 )
+shape = SubResource( 25 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -43.8345, 122.926 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -88.6521, 76.9087 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( -104.152, -90.0019 )
+shape = SubResource( 28 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 20.3272, -145.044 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Ship"]
+visible = false
+position = Vector2( 110.793, -77.9393 )
+shape = SubResource( 30 )
+
+[node name="SpawnLocation" type="Position2D" parent="Ship"]
+position = Vector2( 16.438, 11.4836 )
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+scale = Vector2( 0.125, 0.125 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 128
+format = 1
+tile_data = PoolIntArray( 131073, 0, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 2, 0, 196609, 3, 0, 196610, 4, 0, 196611, 9, 0, 196612, 4, 0, 196613, 9, 0, 196614, 4, 0, 196615, 5, 0, 262145, 6, 0, 262146, 7, 0, 262147, 7, 0, 262148, 7, 0, 262149, 7, 0, 262150, 7, 0, 262151, 8, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="Ship/ladder1" to="Ship/ladder1" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Ship/ladder1" to="Ship/ladder1" method="_on_ladder_body_exited"]
+[connection signal="body_entered" from="Ship/ladder2" to="Ship/ladder2" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Ship/ladder2" to="Ship/ladder2" method="_on_ladder_body_exited"]
+[connection signal="body_entered" from="Ship/ladder3" to="Ship/ladder3" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Ship/ladder3" to="Ship/ladder3" method="_on_ladder_body_exited"]
+[connection signal="body_entered" from="Ship/ladder4" to="Ship/ladder4" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Ship/ladder4" to="Ship/ladder4" method="_on_ladder_body_exited"]

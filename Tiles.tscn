@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/PinkNeonTileSet.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="Tiles" type="Node"]
+
+[node name="0" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 37, 165, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="0"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
+visible = false
+position = Vector2( 32, 32 )
+shape = SubResource( 1 )
+
+[node name="1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 165, 165, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="1"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
+visible = false
+position = Vector2( 32, 32 )
+shape = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 192, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 293, 165, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="2"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D"]
+visible = false
+position = Vector2( 32, 32 )
+shape = SubResource( 1 )
